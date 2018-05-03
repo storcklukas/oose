@@ -3,11 +3,11 @@
  */
 public class Aufgabe01 {
 	public static long fak(long n) { // Fakultätsfunktion
-		if (n > 1) {
+		if (n > 1)
 			return (n * (fak(n - 1)));
-		} else if (n == 1) {
+		else if (n == 1)
 			return 1;
-		} else {
+		else {
 			System.out.println("n ist kleiner 1. Nicht definiert.");
 			return 0;
 		}
