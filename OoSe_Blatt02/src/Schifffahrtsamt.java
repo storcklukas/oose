@@ -1,4 +1,5 @@
 /*
+ * für Aufgabe 4
  */
 public class Schifffahrtsamt {
 	static Schiff[] schiffliste;
