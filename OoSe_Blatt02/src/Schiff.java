@@ -17,7 +17,6 @@ public class Schiff {
 
 	void empfangeNachricht(String msg) {
 		System.out.println();
-		System.out.println(
-				"Empfangen von " + name + "/" + kennzeichen + ": " + msg);
+		System.out.println("Empfangen von " + name + "/" + kennzeichen + ": " + msg);
 	}
 }
