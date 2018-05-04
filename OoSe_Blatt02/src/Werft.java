@@ -1,5 +1,5 @@
 /*
- * f¸r Aufgabe 4
+ * f√ºr Aufgabe 4
  */
 public class Werft {
 	public static void main(String[] args) {
@@ -16,8 +16,8 @@ public class Werft {
 		amt.meldung("Sonnenschein bei Rheinkilometer 650", 0);
 	}
 
-	void produziereSchiff(String name, double l‰nge, Schifffahrtsamt amtID) {
-		Schiff neuesSchiff = new Schiff(name, l‰nge);
+	void produziereSchiff(String name, double l√§nge, Schifffahrtsamt amtID) {
+		Schiff neuesSchiff = new Schiff(name, l√§nge);
 		amtID.regestriereSchiff(neuesSchiff);
 		String kennzeichen = amtID.getKennzeichen();
 		neuesSchiff.setKennzeichen(kennzeichen);
