@@ -9,7 +9,7 @@ public class Schifffahrtsamt {
 		schiffliste = new Schiff[50];
 	}
 	
-	void regestriereSchiff(Schiff name) {
+	void registriereSchiff(Schiff name) {
 		if (anzahlSchiffe < 50) {
 			schiffliste[anzahlSchiffe] = name;
 			anzahlSchiffe++;
