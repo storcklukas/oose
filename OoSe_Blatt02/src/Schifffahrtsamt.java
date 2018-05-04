@@ -1,5 +1,5 @@
 /*
- * für Aufgabe 4
+ * fÃ¼r Aufgabe 4
  */
 public class Schifffahrtsamt {
 	static Schiff[] schiffliste;
@@ -9,7 +9,7 @@ public class Schifffahrtsamt {
 		schiffliste = new Schiff[50];
 	}
 	
-	void regestriereSchiff(Schiff name) {
+	void registriereSchiff(Schiff name) {
 		if (anzahlSchiffe < 50) {
 			schiffliste[anzahlSchiffe] = name;
 			anzahlSchiffe++;
