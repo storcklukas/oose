@@ -1,14 +1,14 @@
 /*
- * f¸r Aufgabe 4
+ * f√ºr Aufgabe 4
  */
 public class Schiff {
 	private String name;
 	private String kennzeichen;
-	private double l‰nge;
+	private double l√§nge;
 
-	public Schiff(String input_name, double input_l‰nge) {
+	public Schiff(String input_name, double input_l√§nge) {
 		name = input_name;
-		l‰nge = input_l‰nge;
+		l√§nge = input_l√§nge;
 	}
 
 	void setKennzeichen(String input_kennzeichen) {
