@@ -1,14 +1,13 @@
 /*
- * für Aufgabe 4
  */
 public class Schifffahrtsamt {
 	static Schiff[] schiffliste;
-	static int anzahlSchiffe = 0; 
-	
+	static int anzahlSchiffe = 0;
+
 	public Schifffahrtsamt() {
 		schiffliste = new Schiff[50];
 	}
-	
+
 	void registriereSchiff(Schiff name) {
 		if (anzahlSchiffe < 50) {
 			schiffliste[anzahlSchiffe] = name;
