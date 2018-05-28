@@ -1,39 +1,43 @@
 package aufgabe04;
 
+import java.util.concurrent.ExecutionException;
+
 public class Person implements Comparable<Object> {
 	String name;
 	String vorname;
 	int postleitzahl;
-	String stra√üe;
+	String straﬂe;
 	int hausnummer;
 	
 	/*
-	 * Das hier zur Aufgabe ist sicherlich nicht das geforderte... kein Plan
-	 * Die Idee war bei den ints einen Vergleich durchzuf√ºhren (mit -1 bei this < zweitePerson, 0 bei == und 1 bei this > zweitePerson) und bei den Strings ein -2 bei ungleichheit zur√ºckzugeben.
-	 * einzige M√∂glichkeit die Strings auf gr√∂√üer/kleiner zu vergleichen w√§re in dem man Buchstabe f√ºr Buchstabe den String abl√§uft... 
-	 * (non-Javadoc)
-	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 * Ich vermute mal so war das ganze gemeint.
+	 * Soweit ich das verstanden habe ist das Compareable Interface f¸rs sortieren gedacht, gibt also letztendlich zur¸ck ob das Objekt in frage dr¸ber drunter oder auf der gleichen Stelle stehen muss.
+	 * F¸r die Strings habe ich einfach die bereits bei denen eingebaute compareTo Funktion benutzt (sind auch Compareable) und f¸r Integer habe ich einfach nach der Wertigkeit geguckt
+	 * Die Abfragen gucken einfach nur immer ob es kleiner ist (also drunter eingeordnet werden muss), wenn dies nicht der Fall ist wird eine positive Zahl ausgegeben. Ist dies jedoch der Fall wird das n‰chste Atribut angeguckt um 
+	 * danach zu ordnen bis am Ende nurnoch die Gleichheitsabfrage bleibt
 	 */
 	@Override
 	public int compareTo(Object o) {
-		if (o instanceof Person) {
-			Person zweitePerson = (Person)o;
-			if (this.name.equals(zweitePerson.name)) {
-				if (this.vorname.equals(zweitePerson.vorname)) {
-					if (this.postleitzahl == zweitePerson.postleitzahl) {
-						if (this.stra√üe.equals(zweitePerson.stra√üe)) {
-							if (this.hausnummer == zweitePerson.hausnummer) return 0;
-							else {
-								if (this.hausnummer > zweitePerson.hausnummer) return 1;
-								else return -1;
+	
+		Person target = (Person)o;
+		if(this.name.compareTo(target.name)<=0) {
+			if(this.vorname.compareTo(target.vorname)<=0) {
+				if(this.postleitzahl<=target.postleitzahl) {
+					if(this.straﬂe.compareTo(target.straﬂe)<=0) {
+						if(this.hausnummer<=target.hausnummer) {
+							if(this.hausnummer==target.hausnummer) {
+								return 0;
 							}
-						} else return -2;
-					} else {
-						if (this.postleitzahl > zweitePerson.postleitzahl) return 1;
-						else return -1;
+						}
+						return target.hausnummer;
 					}
-				} else return -2;
-			} else return -2;
-		} else return -2;
+					return this.straﬂe.compareTo(target.straﬂe);
+				}
+				return target.postleitzahl;
+			}
+			return this.vorname.compareTo(target.vorname);
+		}
+		return this.name.compareTo(target.name);
 	}
+	
 }
