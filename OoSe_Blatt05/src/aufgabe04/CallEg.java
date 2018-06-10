@@ -8,6 +8,7 @@ public class CallEg {
 			methodB();
 		} catch (ArithmeticException oops) {
 			oops.printStackTrace();
+			throw oops;
 		}
 	}
 	public void methodB() throws ArithmeticException {
@@ -16,6 +17,7 @@ public class CallEg {
 			methodC();
 		} catch (ArithmeticException oops) {
 			oops.printStackTrace();
+			throw oops;
 		}
 	}
 	public void methodC() throws ArithmeticException {
@@ -24,6 +26,7 @@ public class CallEg {
 			int a = 1/0;
 		} catch (ArithmeticException oops) {
 			oops.printStackTrace();
+			throw oops;
 		}
 	}
 }
