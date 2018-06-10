@@ -1,6 +1,6 @@
 package aufgabe02;
 
-public abstract class Körper {
+public abstract class KÃ¶rper {
 	double p1, p2, p3;
 	
 	public void verschiebe(double p1, double p2, double p3) {

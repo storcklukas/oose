@@ -1,6 +1,6 @@
 package aufgabe02;
 
-public class Kugel extends Körper {
+public class Kugel extends KÃ¶rper {
 	double radius;
 	
 	public Kugel(double p1, double p2, double p3, double radius) {

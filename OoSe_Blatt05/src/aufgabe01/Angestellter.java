@@ -1,6 +1,6 @@
 package aufgabe01;
 
-public class Angestellter { // ist das schon Kapselung
+public class Angestellter {
 	private String vorname;
 	private String nachname;
 	private int alter;
@@ -13,7 +13,7 @@ public class Angestellter { // ist das schon Kapselung
 		this.gehalt = gehalt;
 	}
 	
-	public void gehaltErhöhen(int betrag) {
+	public void gehaltErhÃ¶hen(int betrag) {
 		gehalt += betrag;
 	}
 	

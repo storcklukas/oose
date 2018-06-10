@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class testKlasse {
 
 	public static void main(String[] args) {
-		ArrayList<Körper> list = new ArrayList<>();
+		ArrayList<KÃ¶rper> list = new ArrayList<>();
 		list.add(new Kugel(3,2,4,4));
 		list.add(new Kugel(3,2,4,4));
 		list.add(new Quader(1,1,1,1,1,1));
