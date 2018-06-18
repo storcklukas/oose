@@ -21,6 +21,7 @@ public class DateiBeobachter implements Runnable{
 		long actTime = System.nanoTime();
 		double difference = (actTime - startTime) / 1e6;
 		long last = file.lastModified();
+		long lastName = startTime;
 		String name = file.getName();
 		
 		if(!file.exists()) {
@@ -28,6 +29,11 @@ public class DateiBeobachter implements Runnable{
 			return;
 		}
 		do {
+			if ((actTime - lastName)/1e6 > 500) { // alle 0.5 Sekunden
+				System.out.println("Filename: " + name);
+				lastName = System.nanoTime();
+			}
+			
 			if (last != file.lastModified()) {
 				System.out.println("The file " + name + " has been modified.");
 				last = file.lastModified();
