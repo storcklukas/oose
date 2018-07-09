@@ -13,8 +13,10 @@ def finde_primzahlen(max_number=1000):
                 break
         if is_prim:
             prim_list.append(n)
-            print(n)
+            #print(n)
         n += 1
+
+    print(prim_list)
 
 
 finde_primzahlen()

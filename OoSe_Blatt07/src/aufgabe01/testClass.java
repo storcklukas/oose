@@ -9,6 +9,7 @@ public class testClass {
 		l.add(3);
 		l.insertFirst(4);
 		l.insertFirst(5);
+		System.out.println(l.toString());
 		l.remove(2);
 		l.remove(0);
 		l.remove(2);
